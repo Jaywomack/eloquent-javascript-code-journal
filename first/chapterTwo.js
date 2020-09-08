@@ -1,14 +1,14 @@
-// A fragment of code is an expression
-22;
+// // A fragment of code is an expression
+// 22;
 
-// statements that effect something are called side effects of the code
+// // statements that effect something are called side effects of the code
 
-// Binding or Variables
-let caught = 5 * 5;
+// // Binding or Variables
+// let caught = 5 * 5;
 
-//example
-let luigisDebt = 140;
-luigisDebt = luigisDebt = 35;
+// //example
+// let luigisDebt = 140;
+// luigisDebt = luigisDebt = 35;
 // console.log("Luigis debt:", luigisDebt);
 
 // The environment is the collection of bindings and their values
@@ -120,15 +120,31 @@ luigisDebt = luigisDebt = 35;
 // });
 // // Using reduce()
 // let total = [];
-let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// numbersArray.reduce((accumulator, item) => {
-//   total = accumulator + item;
-//   return total;
-// });
+// let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// // numbersArray.reduce((accumulator, item) => {
+// //   total = accumulator + item;
+// //   return total;
+// // });
 
-// console.log(total);
-function isEven(num) {
-  return num % 2 === 0;
+// // console.log(total);
+// function isEven(num) {
+//   return num % 2 === 0;
+// }
+// let evens = numbersArray.filter(isEven);
+// console.log(evens);
+
+// Breaking out of a loop with break;
+// the second colon needs to be there
+for (let current = 20; ; current = current + 1) {
+  if (current % 7 === 0) {
+    console.log(current);
+    break;
+  }
 }
-let evens = numbersArray.filter(isEven);
-console.log(evens);
+
+for (let current = 20; ; current = current + 1) {
+  if (current % 7 == 0) {
+    console.log(current);
+    break;
+  }
+}
