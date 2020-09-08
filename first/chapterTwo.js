@@ -134,17 +134,217 @@
 // console.log(evens);
 
 // Breaking out of a loop with break;
+
 // the second colon needs to be there
-for (let current = 20; ; current = current + 1) {
-  if (current % 7 === 0) {
-    console.log(current);
-    break;
+// for (let current = 20; ; current = current + 1) {
+//   if (current % 7 === 0) {
+//     console.log(current);
+//     break;
+//   }
+// }
+
+// for (let current = 20; ; current = current + 1) {
+//   if (current % 7 == 0) {
+//     console.log(current);
+//     break;
+//   }
+// }
+
+/***
+ * Updating bindings succinctly
+ */
+
+// counter = counter + 1;
+// shortcut is to use counter += 1;
+// counter *= 2;
+
+// for (let number = 0; number <= 12; number +=2) {
+// console.log(number)
+// }
+
+// Similarly for + and - there is an even shorter way
+
+// counter ++
+// counter --
+
+/***
+ * Dispatching on a value with switch
+ */
+
+// if (x == 'value1') action1();
+// else if (x == 'value2') action2();
+// else if (x == 'value3') action3();
+// else defaultAction();
+
+// Replacing this with the switch statement
+
+// switch (prompt('What is the weather like?')) {
+//   case 'rainy':
+//     console.log('Remember to bring an umbrella.');
+//     break;
+//   case 'sunny':
+//     console.log('Dress lightly.');
+//     break;
+//   case 'cloudy':
+//     console.log('Go outside.');
+//     break;
+//   default:
+//     console.log('Unknown weather type!');
+// }
+/***
+ *
+ * LOOPING A TRIANGLE
+ */
+/**
+ * Write a loop that makes seven calls to console.log to output the following triangle:
+
+#
+##
+###
+####
+#####
+######
+#######
+It may be useful to know that you can find the length of a string by writing .length after it.
+ */
+
+// for (let hash = '#'; hash.length <= 7; hash = hash + '#') {
+//   console.log(hash);
+// }
+
+// let hash = '#';
+// while (hash.length <= 12) {
+//   hash = hash + '#';
+//   console.log(hash);
+// }
+
+// for (let hash = '#'; hash.length <= 7; hash = hash + '#') {
+//   console.log(hash);
+// }
+
+// for (let hash = '#'; hash.length <= 10; hash = hash + '#') {
+//   console.log(hash);
+//
+// }
+
+/***]
+ * FizzBuzz
+Write a program that uses console.log to print all the 
+numbers from 1 to 100, with two exceptions. For numbers divisible 
+by 3, print "Fizz" instead of the number, and for numbers 
+divisible by 5 (and not 3), print "Buzz" instead.
+
+When you have that working, modify your program to print
+ "FizzBuzz" for numbers that are divisible by both 3 and 
+ 5 (and still print "Fizz" or "Buzz" for numbers divisible
+  by only one of those).
+
+(This is actually an interview question that has been 
+  claimed to weed out a significant percentage of 
+  programmer candidates. So if you solved it, your 
+  labor market value just went up.)
+ * 
+ */
+
+// Working solution My solution
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log('FizzBuzz');
+//   } else if (i % 3 === 0) {
+//     console.log('Fizz');
+//   } else if (i % 5 === 0) {
+//     console.log('Buzz');
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// Better solution
+// for (let i = 0; i < 100; )
+// console.log((++i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'buzz') || i);
+
+/**
+ * ChessBoard
+ * Write a program that creates a string that represents and 8x8
+ * grid, using newline characters to separate lines. At each position
+ * of the grid there is either a space or a "#" character. The characters
+ * should form a chessboard
+ *
+ *
+ */
+// Non-working solution
+// for (let row = ''; row.length <= 16; row = row + '# ') {
+//   if (row.length % 2 === 0) {
+//     console.log(row);
+//   } else if (!row.length % 2 === 0) {
+//     console.log(`${row}`);
+//   }
+// }
+
+// Working solution not mine
+// /
+
+// let boardSize = 8;
+
+// let chessBoard = '';
+
+// // In the outer loop add newline character
+// for (let y = 0; y < boardSize; y++) {
+//   // In the inner loop add a line, each line alternates between starting
+//   // with a '#' or a ' '
+//   for (let x = 0; x < boardSize; x++) {
+//     if ((x + y) % 2 == 0) chessBoard += ' ';
+//     else chessBoard += '#';
+//   }
+//   chessBoard += '\n';
+// }
+
+// console.log(chessBoard);
+
+// //  size of board
+// let size = 20;
+// // create board variable and set to an empty string that will be
+// // filled inside the inner loop
+// let board = '';
+
+// // Create a loop with an inner loop
+
+// // Outer loop will add a \n character
+// for (y = 0; y < size; y++) {
+//  // Inner loop that sets string value and iterates 20 times before a newline
+//  // is created by the outer loop.
+//   for (x = 0; x < size; x++) {
+//     // checks to see if the iteration of size is either even or odd
+//     // and alternates between whether to start with a ' ' or a '#'
+//     if ((x + y) % 2 == 0) {
+//       // If the iteration is an even number then a space is added to board
+//       board += ' ';
+//     } else {
+//       // Otherwise the iteration is odd and a hash is added
+//       board += '#';
+//     }
+//   }
+//   // Add a newline character at the end of the board string so that
+//   // a newline is started
+//   board += '\n';
+// }
+
+// console.log(board);
+
+// Chessboard again no help
+
+let size = 20;
+board = '';
+
+for (let y = 0; y < size; y++) {
+  for (let x = 0; x < size; x++) {
+    if ((x + y) % 2 == 0) {
+      board += ' ';
+    } else {
+      board += '#';
+    }
   }
+  board += '\n';
 }
 
-for (let current = 20; ; current = current + 1) {
-  if (current % 7 == 0) {
-    console.log(current);
-    break;
-  }
-}
+console.log(board);
