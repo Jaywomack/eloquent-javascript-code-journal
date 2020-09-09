@@ -333,18 +333,18 @@ When you have that working, modify your program to print
 
 // Chessboard again no help
 
-let size = 20;
-board = '';
+// let size = 20;
+// board = '';
 
-for (let y = 0; y < size; y++) {
-  for (let x = 0; x < size; x++) {
-    if ((x + y) % 2 == 0) {
-      board += ' ';
-    } else {
-      board += '#';
-    }
-  }
-  board += '\n';
-}
+// for (let y = 0; y < size; y++) {
+//   for (let x = 0; x < size; x++) {
+//     if ((x + y) % 2 == 0) {
+//       board += ' ';
+//     } else {
+//       board += '#';
+//     }
+//   }
+//   board += '\n';
+// }
 
-console.log(board);
+// console.log(board);
