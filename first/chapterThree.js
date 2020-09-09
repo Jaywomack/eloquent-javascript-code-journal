@@ -78,3 +78,70 @@
 // };
 
 // hummus(2);
+
+// Lexical scoping is where blocks can see functions within there scope and see outside of it but can never see inside others
+
+// Function declaration
+
+// function declarations are hoisted in the first pass of the two pass compiler and therefor can be used at anytime as long as the place its used has access to that scope.
+
+// console.log('The future says:', future());
+// function future() {
+//   return "You'll never have flying cars.";
+// }
+
+/***
+ * ARROW FUNCTIONS
+ */
+
+// const power = (base, exponent) => {
+//   let result = 1;
+//   for (let count = 0; count < exponent; count++) {
+//     result *= base;
+//   }
+//   return result;
+// };
+
+// console.log(power(3, 10));
+
+// Two similar arrow functions
+// const square1 = (x) => {
+//   return x * x;
+// };
+
+// const square2 = (x) => x * x;
+
+// // When there is no parameter the arrow function looks like this
+// const horn = () => {
+//   console.log('toot');
+// };
+
+// horn();
+
+// Will max out the call stack because there is infinite values returned
+// function chicken() {
+//   return egg();
+// }
+
+// function egg() {
+//   return chicken();
+// }
+
+// console.log(chicken() + 'came first');
+
+// Optional Arguments
+// JavaScript will allow as many arguments or as few as you want. If you put to many it will ignore them and if you put to few it will assign undefined to it.
+
+// function square(x) {
+//   return x * x;
+// }
+// console.log(square(4, true, 'hedgehog')); // The additional arguments are ignored by JavaScript
+
+// // This function will return the opposite of a single argument or will return the difference between the arguments
+// function minus(a, b) {
+//   if (b === undefined) return -a;
+//   else return a - b;
+// }
+
+// console.log(minus(10));
+// console.log(minus(10, 5));
